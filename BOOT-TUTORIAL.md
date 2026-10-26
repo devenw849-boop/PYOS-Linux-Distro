@@ -1,4 +1,4 @@
-Short doc block you can paste
+
 PyOS is a prototype x86 operating system built around a custom kernel, FAT16 filesystem support, GRUB booting, and a Python userspace stack. It is designed to behave like a small distro foundation, but it is not yet a full production-ready Linux distribution.
 
 Boot methods:
