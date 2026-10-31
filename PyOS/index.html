@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PyOS</title>
+    <meta
+      name="description"
+      content="PyOS is a tiny x86 operating system prototype with a bootable kernel, FAT16 filesystem, package manager, and distro-style tooling."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand">
+          <div class="brand-mark">P</div>
+          <span>PyOS</span>
+        </div>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#features">Features</a>
+          <a href="#boot">Boot</a>
+          <a href="#pkg">Package manager</a>
+          <a href="#status">Status</a>
+        </nav>
+
+        <a class="button ghost" href="#download">Download</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">tiny x86 distro prototype</span>
+            <h1>Build a real operating system, one layer at a time.</h1>
+            <p>
+              PyOS is a bootable, Linux-inspired project built around a custom x86
+              kernel, FAT16 filesystem, package manager, installer planning, and
+              distro-style tooling.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button primary" href="#download">Download ISO</a>
+              <a class="button secondary" href="#boot">Run in QEMU</a>
+            </div>
+
+            <ul class="hero-stats">
+              <li><strong>32-bit</strong><span>x86 kernel</span></li>
+              <li><strong>FAT16</strong><span>filesystem</span></li>
+              <li><strong>pkg</strong><span>package manager</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-panel">
+            <div class="console-window">
+              <div class="window-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <pre><code>PyOS Boot Sequence v0.8
+[  OK  ] kernel entered
+[  OK  ] VGA initialized
+[  OK  ] keyboard ready
+[  OK  ] FAT16 mounted
+[  OK  ] pkg ready
+[  OK  ] login flow ready
+PyOS shell ready</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-block" id="features">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">what is inside</span>
+            <h2>Built like a real distro foundation</h2>
+          </div>
+
+          <div class="grid three-col">
+            <article class="card">
+              <div class="icon">▣</div>
+              <h3>Bootable kernel</h3>
+              <p>
+                A custom x86 kernel with VGA text output, keyboard input, GRUB
+                bootflow, and startup messages.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="icon">⛁</div>
+              <h3>FAT16 storage</h3>
+              <p>
+                A simple FAT16 driver is used for reading and writing disk data in a
+                classic OS-style layout.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="icon">◫</div>
+              <h3>Package manager</h3>
+              <p>
+                PyOS includes a package manager model inspired by apt/dnf and a
+                repo catalog with install metadata.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-block alt" id="boot">
+        <div class="container split-layout">
+          <div>
+            <span class="eyebrow">boot + testing</span>
+            <h2>Run PyOS in QEMU</h2>
+            <p>
+              PyOS is designed to boot in a classic x86 VM environment. QEMU is the
+              recommended first test target because it matches the old BIOS and IDE-style
+              assumptions of this project.
+            </p>
+
+            <pre class="code-block"><code>cd /home/ohio/PyOS
+make run</code></pre>
+          </div>
+
+          <div class="stack-list">
+            <div class="mini-panel">
+              <span>Boot target</span>
+              <strong>QEMU i386</strong>
+            </div>
+            <div class="mini-panel">
+              <span>Disk</span>
+              <strong>raw FAT16 image</strong>
+            </div>
+            <div class="mini-panel">
+              <span>Boot loader</span>
+              <strong>GRUB</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-block" id="pkg">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">package system</span>
+            <h2>Repo-aware distro tooling</h2>
+          </div>
+
+          <div class="grid two-col">
+            <article class="card thin">
+              <h3>Package manager</h3>
+              <p>
+                A package manager with dependency awareness, version checks, repo metadata,
+                and install state tracking.
+              </p>
+            </article>
+
+            <article class="card thin">
+              <h3>Installer planning</h3>
+              <p>
+                Real disk detection, staged install plans, and install-manifest thinking for
+                future system deployment flows.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-block status" id="status">
+        <div class="container status-room">
+          <div>
+            <span class="eyebrow">project status</span>
+            <h2>Prototype status, not production Linux</h2>
+          </div>
+
+          <div class="status-list">
+            <div class="status-item good">
+              <span class="dot"></span>
+              <span>Bootable x86 kernel</span>
+            </div>
+            <div class="status-item good">
+              <span class="dot"></span>
+              <span>GRUB ISO generation</span>
+            </div>
+            <div class="status-item good">
+              <span class="dot"></span>
+              <span>FAT16 disk image and repo metadata</span>
+            </div>
+            <div class="status-item good">
+              <span class="dot"></span>
+              <span>Package and installer planning layer</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-block download" id="download">
+        <div class="container download-box">
+          <div>
+            <span class="eyebrow">download</span>
+            <h2>Ready to test</h2>
+          </div>
+
+          <div class="download-actions">
+            <a class="button primary" href="build/pyos.iso">Download ISO</a>
+            <a class="button secondary" href="build/pyos-disk.img">Download disk image</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>PyOS</p>
+        <p>tiny distro prototype for x86 experimentation</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "PyOS repo security",
+  "enabled": true,
+  "algorithm": "hmac-sha256",
+  "key_id": "pyos-repo-key",
+  "key_material": "pyos-repo-secret-key",
+  "trusted_keys": [
+    "pyos-repo-key"
+  ],
+  "description": "Local signing model used to verify package repository metadata before install."
+}

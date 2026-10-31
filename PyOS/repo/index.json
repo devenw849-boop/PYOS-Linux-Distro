@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "name": "PyOS package repo",
+    "type": "local",
+    "version": "1.0.0",
+    "description": "Local package repository for PyOS prototype packages"
+  },
+  "packages": [
+    {
+      "name": "base",
+      "version": "1.0.0",
+      "category": "system",
+      "arch": "x86_64",
+      "description": "Core PyOS runtime and initialization tools",
+      "depends": [],
+      "archive": "packages/base-1.0.0.tar.gz",
+      "sha256": "placeholder-base"
+    },
+    {
+      "name": "pkg",
+      "version": "1.0.0",
+      "category": "system",
+      "arch": "x86_64",
+      "description": "Official PyOS package manager",
+      "depends": [
+        "base >= 1.0.0"
+      ],
+      "archive": "packages/pkg-1.0.0.tar.gz",
+      "sha256": "placeholder-pkg"
+    },
+    {
+      "name": "terminal",
+      "version": "0.8.0",
+      "category": "system",
+      "arch": "x86_64",
+      "description": "Text terminal and shell utilities",
+      "depends": [
+        "base >= 1.0.0"
+      ],
+      "archive": "packages/terminal-0.8.0.tar.gz",
+      "sha256": "placeholder-terminal"
+    },
+    {
+      "name": "kde-plasma",
+      "version": "6.3.0",
+      "category": "desktop",
+      "arch": "x86_64",
+      "description": "KDE Plasma-inspired desktop environment shell",
+      "depends": [
+        "base >= 1.0.0",
+        "terminal >= 0.8.0"
+      ],
+      "archive": "packages/kde-plasma-6.3.0.tar.gz",
+      "sha256": "placeholder-kde-plasma"
+    }
+  ],
+  "signature": "24fd0e788c12fe998886b21e0614fda5f0d7c327cea73e7693feb66f2510472a"
+}

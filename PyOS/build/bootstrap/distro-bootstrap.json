@@ -1,0 +1,23 @@
+{
+  "distro": "PyOS",
+  "version": "0.8.0",
+  "codename": "Aster",
+  "arch": "x86_32",
+  "bootloader": "GRUB",
+  "package_manager": "pkg",
+  "init_system": "pyos-init",
+  "default_shell": "pyos-shell",
+  "default_desktop": "kde-plasma",
+  "user": {
+    "username": "pyos",
+    "home": "/home/pyos",
+    "default_shell": "pyos-shell",
+    "default_desktop": "kde-plasma"
+  },
+  "repo": {
+    "index": "/home/ohio/PyOS/repo/index.json",
+    "rootfs": "/home/ohio/PyOS/repo/rootfs",
+    "packages": "/home/ohio/PyOS/repo/packages"
+  },
+  "status": "bootstrap-complete"
+}

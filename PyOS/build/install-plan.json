@@ -1,0 +1,19 @@
+{
+  "distro": "PyOS",
+  "version": "0.8.0",
+  "target": "/dev/sda",
+  "desktop": "kde-plasma",
+  "shell": "pyos-shell",
+  "package_manager": "pkg",
+  "bootloader": "GRUB",
+  "dry_run": true,
+  "steps": [
+    "Detect target device",
+    "Check disk size and partition layout",
+    "Create or validate root filesystem",
+    "Copy kernel and configuration files",
+    "Install bootloader entry",
+    "Write distro metadata and user config",
+    "Finish and reboot into the installed system"
+  ]
+}
